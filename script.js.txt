@@ -1,0 +1,20 @@
+function toggleIngredients() {
+  const list = document.getElementById("ingredients");
+  list.classList.toggle("hidden");
+}
+
+let currentStep = 0;
+
+function startCooking() {
+  const steps = document.querySelectorAll("#steps ol li");
+  if (currentStep < steps.length) {
+    steps[currentStep].style.background = "#d0f0c0";
+    document.getElementById("progressBar").value = currentStep + 1;
+    currentStep++;
+  } else {
+    alert("You're done cooking!");
+    currentStep = 0;
+    steps.forEach(step => step.style.background = "none");
+    document.getElementById("progressBar").value = 0;
+  }
+}

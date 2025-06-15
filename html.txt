@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chocolate Cake Recipe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="recipe-card">
+    <h1>Chocolate Cake</h1>
+    <img src="cake.jpg" alt="Chocolate Cake" class="dish-image">
+    
+    <button onclick="toggleIngredients()">Show Ingredients</button>
+    <ul id="ingredients" class="hidden">
+      <li>2 cups flour</li>
+      <li>1 cup sugar</li>
+      <li>1/2 cup cocoa powder</li>
+      <li>1 tsp baking soda</li>
+    </ul>
+
+    <div id="steps">
+      <h2>Steps:</h2>
+      <ol>
+        <li>Preheat oven to 180°C.</li>
+        <li>Mix dry ingredients.</li>
+        <li>Add wet ingredients.</li>
+        <li>Bake for 30 minutes.</li>
+      </ol>
+    </div>
+
+    <p>Prep Time: 15 mins | Serves: 4</p>
+
+    <button onclick="startCooking()">Start Cooking</button>
+    <progress id="progressBar" value="0" max="4"></progress>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
